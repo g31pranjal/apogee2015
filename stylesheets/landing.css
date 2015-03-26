@@ -1,0 +1,933 @@
+ /*
+ z-indexes
+
+
+
+
+
+
+ */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000 url(/images/loading.gif) center center no-repeat;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader{
+position:absolute;
+z-index:1000000;
+height:100%;
+width:100%;
+background-color:#000;
+}
+
+#loaderimg{
+position:absolute;
+margin:auto;
+top:50px;
+width:500px;
+left:0;
+right:0;
+
+}
+
+#landing
+{
+	position:fixed;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-size: 13px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	line-height: 20px;
+}
+
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Header Styles*/
+.header{
+  z-index: 10000;
+  position: absolute;
+  display:block;
+  top:0px;
+  width: 100%;
+  color: #bbb;
+  font-family: 'Lato', sans-serif;
+}
+
+.headerButton{
+  position: absolute;
+  top:30px;
+  font-size: 20px;
+  border: 1px #fff solid;
+  padding: 5px 50px 5px 50px;
+  text-align: center;
+  cursor : pointer;
+}
+
+#registerButton{
+  left: 30px;
+}
+
+#loginButton{
+  left: 250px;
+  position:fixed;
+}
+
+#profileButton{
+  left: 30px;
+  display: none;
+}
+
+#logoutButton{
+  left: 250px;
+  position:fixed;
+  display: none;
+}
+
+#loginButton img{
+  position: absolute;
+  height: 20px;
+  right: 20px;
+  top:5px;
+  display: none;
+} 
+
+#loginFormModal {
+  position: fixed;
+  display: none;
+  top: 75px;
+  left: 29px;
+  width: 323px;
+  text-align: center;
+  padding: 15px 30px;
+  background-color: rgba(40,40,40,0.9);
+  border: 1px solid #ddd;
+  color:rgb(230,230,230);
+}
+
+
+#loginFormModal:before {
+  display: block;
+  top: -8px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid transparent;
+  right: 26px;
+}
+
+#loginFormModal input::-webkit-input-placeholder {
+   color: rgb(230,230,230) !important;
+}
+
+#loginFormModal input:-moz-placeholder { /* Firefox 18- */
+   color: rgb(230,230,230) !important;  
+}
+
+#loginFormModal input::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(230,230,230) !important;  
+}
+
+#loginFormModal input:-ms-input-placeholder {  
+   color: rgb(230,230,230) !important;  
+}
+
+#googleLoginButton:hover{
+  background-color: #f0ca49;
+  cursor: pointer;
+}
+
+#facebookLoginButton:hover{
+  background-color: #f0ca49;
+  cursor: pointer;
+}
+
+#loginSubmit:hover{
+  cursor: pointer;
+  background-color: #37badb;
+}
+
+
+#loginFormModal input{
+  width: 80%;
+  height: 30px;
+  background-color: transparent;
+  padding: 10px;
+  color: #fff;
+  margin: 5px;
+  border: 1px solid rgba(150,150,150,0.5);
+  outline: none;
+  font-size: 12px;
+  transition:0.2s; 
+}
+
+#loginFormModal input[type=button]{
+  padding-bottom: 25px;
+}
+
+#loginFormModal input:focus{
+  border: 1px solid #2f95d3;
+}
+
+
+#loginFormModal hr{
+  border-color: rgb(240,240,240);
+  margin:20px 20px;
+}
+
+
+.searchIcon{
+  position: absolute;
+  top:30px;
+  right: 30px;
+  height: 50px;
+}
+#chromeExp
+{
+	position:fixed;
+	width:300px;
+	font-size:1em;
+	bottom:20px;
+	right:20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-align: right;
+}
+#update 
+{
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  text-align: center;
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  height: 25px;
+  bottom: 0px;
+}
+
+
+
+
+
+/*Sidebar Styles*/
+
+.sidebar{
+  z-index: 1000;
+  position: absolute;
+  top:100px;
+  right: 20px;
+  font-size: 15px;
+}
+
+.sidebarUl{
+  list-style-type: none;
+}
+
+.sidebarUl a{
+  text-decoration: none;
+}
+
+.sidebarUl li{
+  padding: 5px 25px 5px 25px;
+  border: 1px #fff solid;
+  margin: 10px;
+  text-align: center;
+}
+
+.searchIcon{
+  position: fixed;
+}
+
+/* Sweep To Left */
+.hvr-sweep-to-left {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(240,240,240);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: rgb(40,40,40);
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(240,240,240);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: rgb(40,40,40);
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*Updates*/
+.updates{
+  position:fixed;
+  left: 100px;
+  border: 1px solid #fff;
+  width: 200px;
+  height: 400px;
+}
+
+/*Navabar*/
+
+.navbar{
+  position: fixed;
+  bottom: 38px;
+  left:100px;
+  z-index: 3000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.apogeeLogo{
+  height: 50px;
+  position: absolute;
+  bottom: -10px;
+  left: -80px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: rgb(180,180,180);
+  margin: 15px 10px 30px 10px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  /* font-weight: 400; */
+  transition:0.4s;
+}
+
+.navbar a:hover{
+  border-bottom: 3px solid #fff;
+  color: rgb(240,240,240);
+}
+
+.activeNavbar{
+  border-bottom: 3px solid #fff;
+  color: rgb(240,240,240);
+}
+
+/*Register*/
+
+/*Put Media Queries here for responsive*/
+
+
+/*Contacts*/
+
+
+.contactScreen{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  z-index: 1990;
+  display: none;
+}
+
+.contactText{
+  font-size: 60px;
+  margin-top:30px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+
+.contact {
+ overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 40px;
+}
+
+.contact .left {
+    float: left;
+    text-align: left;
+    width: calc(33% - 50px);
+    margin-left: 50px;
+    opacity: 1;
+}
+.contact .center {
+  position: absolute;
+  margin-left: 33%;
+    float: left;
+    text-align: center;
+    width: 33%;
+    opacity: 1;
+}
+
+
+.contact .right {
+  float: right;
+  text-align: right;
+  width: calc(33%- 50px);
+  margin-right: 50px;
+  opacity: 1;
+}
+
+
+.contact  p {
+  margin: 5px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.contact span {
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: underline; 
+}
+
+
+/*------------ Participation -----------*/
+
+
+.participationScreen{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  z-index: 1990;
+  display: none;
+}
+
+.participationText,.papersProjText,.lectureText, .profileText, .sponsorsText{
+  font-size: 60px;
+  margin-top:30px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+.participationToogle>ul,.papersProjToogle>ul{
+  list-style-type: none;
+text-align: center;
+margin-top: 40px;
+}
+
+.participationToogle>ul>li.inactive ,.papersProjToogle>ul>li.inactive {
+  display: inline;
+  margin: 0px 50px;
+  font-weight: 700;
+  font-size: 15;
+  text-align: center;
+  border: 0px solid #eee;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
+.participationToogle>ul>li.active ,.papersProjToogle>ul>li.active{
+  display: inline;
+  margin: 0px 50px;
+  font-weight: 700;
+  font-size: 15;
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
+.participationData,.papersProjData,.lectureData, .profileData, .sponsorsData{
+  margin-top: 30px;
+  width: 96%;
+  margin-left: 2%;
+  border-top: 1px solid #aaa;
+  height: calc(100% - 300px);
+  overflow-y:scroll;
+}
+
+.participationInner,.papersProjInner,.lectureInner, .profileInner, .sponsorsInner {
+  padding: 25px;
+  font-size: 18;
+}
+
+#map
+{
+	float:right;
+	width: 37%;
+	height:400px;
+	margin:20px;
+}
+
+.participationInner>.head {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+
+.registerScreen{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  z-index: 2000;
+  display: none;
+}
+
+.closeIcon{
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+.registerText{
+  font-size: 60px;
+  margin-top:30px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 60px;
+}
+
+.registerIcons{
+  padding-top: 40px;
+  width: 244px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 110px;
+}
+
+.fbIcon{
+  float:left;
+  margin-right: 40px;
+  cursor: pointer;
+  height: 100px;
+  width:100px;
+  border-radius: 50px;
+  border: 1px #fff solid;
+  transition:0.5s; /*Make cross Compatitble*/
+}
+
+.fbIcon:hover{
+  background-color: rgba(240,240,240,0.3);
+}
+
+#customBtn {
+      float: left;
+  height: 100px;
+  cursor: pointer;
+  width:100px;
+  border-radius: 50px;
+  border: 1px #fff solid;
+  transition:0.5s; /*Make cross Compatitble*/
+}
+#customBtn:hover {      
+	background-color: rgba(240,240,240,0.3);
+}
+
+
+.rSeparator{
+  padding-top: 15px;
+  height: 20px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 170px;
+}
+
+.registerSeparator{
+  float: left;
+  height: 1px;
+  width: 50px;
+  background-color: #fff;
+  margin-top: 13px;
+}
+
+.separatorText{
+  float: left;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#registerForm{
+  padding-top: 20px;
+  margin: auto;
+  width: 300px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+#registerForm input{
+  display: block;
+  margin-top: 10px;
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+  color: #fff;
+  line-height: 20px;
+  font-size: 20px;
+  border: 1px solid #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding: 5px;
+}
+
+#registerForm input[type='button']{
+  width: 300px;
+  cursor: pointer;
+  color: rgb(240,240,240);
+  background-color: rgba(240,240,240,0.2);
+  height: 50px;
+  border: 0px;
+  transition:0.5s;/*Make this cross compatible*/
+}
+
+#registerForm input[type='button']:hover{
+  background-color: rgba(240,240,240,0.4);
+}
+
+.genderSelect{
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 140px;
+  height: 30px;
+  background-color: transparent;
+  color: rgb(180,180,180);
+  line-height: 30px;
+  font-size: 20px;
+  border: 1px solid #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  transition:0.2s;
+}
+
+.genderSelect:hover{
+  background-color: white;
+  color: black;  
+}
+
+.genderMale{
+  float: right;
+}
+
+.genderSelectActive{
+  background-color: white;
+  color: black;
+}
+
+.genderFemale{
+  float: left;
+}
+
+.regForm{
+  margin-left: calc(50% - 156px);
+  width: 320px;
+}
+
+.collegeSearch{
+  position: fixed;
+  display: none;
+  height: 100%;
+  top:0;
+  background-color: rgba(10,10,10,0.4);
+  transition:0.4s;
+}
+
+@media only screen and (min-width: 1100px) {
+    .collegeSearch{
+      width: 300px;
+      right:-300px;
+    } 
+    .modalBox{
+      height: 150px;
+      width: 300px;
+    }
+  }
+
+@media only screen and (min-width: 1400px) {
+    .collegeSearch{
+      width: 400px;
+      right: -400px;
+    }
+    .modalBox{
+      height: 200px;
+      width: 400px;
+    } 
+  }
+
+.collegeSearchText{
+  text-align: center;
+  font-weight: 100;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.collegeSearchText span{
+  font-weight: bold;
+}
+
+.hexagonLoader{
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top:0;
+  bottom: 0;
+  height: 50px;
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation:    spin 2s infinite linear;
+  -o-animation:      spin 2s infinite linear;
+  animation:         spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.collegeSearchBox{
+  margin: 30px 30px 30px 30px;
+}
+
+.collegeSearchResults{
+  font-size: 15px;
+  font-weight: 300;
+  padding: 10px;
+  margin-top: 10px;
+  color: rgb(40,40,40);
+  background-color: rgb(230,230,230);
+  transition:0.3s;
+  cursor: pointer;
+}
+
+.collegeSearchResults:hover{
+  background-color: rgba(80,80,80,0.6);
+  color: rgb(230,230,230);
+}
+
+.modalScreen{
+  z-index: 10000;
+  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(10,10,10,0.8);
+}
+
+.modalBox{
+  position: absolute;
+  margin: auto;
+  display: none;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  color: #000;
+  font-size: 15px;
+  background-color: rgb(240,240,240);
+  box-shadow: 0px 0px 1px 4px #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.modalBoxButton{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  height: 35px;
+  width: 150px;
+  border-radius: 4px;
+  border: 1px solid #2f95d3;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  cursor: pointer;
+  transition:0.3s;
+}
+
+.modalBoxButton:hover{
+  background-color:#3c77cf;
+  color: #fff;
+}
+
+#profileInfo {
+  width: calc(50% - 70px);
+padding: 20px;
+float: left;
+font-size: 18px;
+padding-left: 50px;
+}
+.mainInfo {
+  padding-top: 20px;
+}
+
+
+#nameBlock, #collegeBlock, #eventBlock {
+  font-size: 30px;
+line-height: 40px;
+font-weight: 500;
+}
+
+#profileEvents {
+  float: left;
+width: calc(49% - 40px);
+height: 100%;
+border-left: 1px solid white;
+padding: 20px;
+}
+
+#eventEntry {
+  font-size: 20px;
+line-height: 25px;
+height: 80px;
+border-top: 1px solid rgba(200,200,200,0.5);
+}
+
+#removeEvent {
+float: right;
+margin-right: 10%;
+margin-top: 25px;
+padding: 5px;
+width: 100px;
+background-color: transparent;
+border: 1px solid white;
+color: white;
+}
+
+#eventContent {
+  width: 60%;
+  float: left;
+  height: 100%;
+}
+
+div.sponsorsInner>.sponsors { 
+        font-size: 35px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+      display:block;
+          text-align:center;
+          width:100%;
+          text-align:center;
+      padding-bottom: 50px;
+      border-bottom:1px solid white; 
+      }
+
+
+div.sponsorsInner>div.sponsors>p{    
+      margin: 40px;
+      }
+
+div.sponsorsInner>div.sponsors>img{    
+      display: inline-block;;
+      position:relative;
+          height:200px;
+          margin: auto;
+      padding: 20px 50px;
+      }
+
+.imgAlt {
+  width: 600px !important;
+  height: auto !important; 
+}

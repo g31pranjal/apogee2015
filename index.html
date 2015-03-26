@@ -1,0 +1,922 @@
+<html>
+<head>
+	<title>APOGEE 2015 | International Technical Festival | BITS Pilani</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="EN">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content = "Apogee, the first ISO 9001:2008 certified technical fest in India, is a large scale event that has attracted the connoisseurs of engineering and technology over years. It represents the zenith of science and engineering in a landscape of future visionaries and scientists."/>
+    <meta name = "keywords" content = "apogee, technical Festival, techfest, tech fest, bits pilani, apogee 2015, bits tech fest, bits fest, birla institute of technology and science"/>
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="copyright" content="Copyright © 2015 Department Of Visual Media, BITS Pilani">
+    <meta name="author" content="Department Of Visual Media, BITS Pilani">
+    <meta name="email" content="dvm@bits-oasis.org">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="1 days">
+    <meta name="google-site-verification" content="PgrAJduJyWy5BDAT2lgQ8q_GbwyL_F1SCmUdg1MhVVw" />
+
+    	<!-- OPEN GRAPH META DATA-->
+    	<!--
+    <meta property="og:title" content="APOGEE 2015 | International Technical Festival">
+	<meta property="og:site_name" content="APOGEE 2015 Intro">
+	<meta property="og:url" content="http://www.bits-apogee.org/">
+	<meta property="og:description" content="Apogee, the first ISO 9001:2008 certified technical fest in India, is a large scale event that has attracted the connoisseurs of engineering and technology over years. It represents the zenith of science and engineering in a landscape of future visionaries and scientists.">
+	<meta property="og:image" content="http://www.bits-apogee.org/intro/images/fbshare.jpg">
+	<meta property="og:type" content="website">
+	-->
+<style>
+	.fbLik
+	{
+	
+		width: 140px;
+		overflow:hidden;
+		height:20px;
+		position:fixed;
+		bottom:80px;
+		right:10px;
+		z-index:1000;
+		
+	}
+</style>
+
+</head>
+<body>
+	<div id="fb-root" > </div>
+	<div class="loader">
+		<img src="./images/ap15.png" id="loaderimg">
+		<div id="loaderAnimation">
+			<div class="circle"></div>
+			<div class="circle1"></div>
+		</div>
+		<div style="color: white; position: absolute; bottom:0px; right:0px; padding:30px;font-family:'Lato';font-size: 16px" id="fallbackprompt">For slow connection and Mobile-compatibility, switch to basic website <br>
+		<a href="http://bits-apogee.org/fallback">http://bits-apogee.org/fallback/</a></div>
+		<!-- <img src="./images/hexagonLoader.png" class="hexagonLoader" id="mainLoaderHex"> -->
+	</div>
+	
+	<link rel="stylesheet" type="text/css" href="./stylesheets/loader.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/landing.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/events.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/workshops.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.4/css/nanoscroller.css">
+<!-- ================================TUTORIAL========================================= -->
+	
+	<div id="tutorial">
+		<img id="tutorialImg" src="./images/tutorialArrow.png" style="display:none"/>
+		<div id="searchTut" style="display:none" >
+		Use this search button to browse through different categories <br>and search events by their name or content..
+		</div>
+		<div id="globeText">
+		The International Year of Light, 2015 (IYL 2015) is a United Nations observance that aims to raise awareness of the achievements of light science and its applications, and its importance to humankind.<br>
+		The 3D Globe on this site shows the electricity consumption in various cities across the globe.<br>(Use your mouse/trackpad to drag and rotate the globe. Scroll to enlarge the globe.)
+		</div>
+		<div id="tutorialButtons">
+			<div id="next" class="tutorialButton" onclick="next()">Next</div>
+			<div id="skip" class="tutorialButton" onclick="skip()">Skip</div>
+		</div>
+	</div>
+	
+	<div id="eventsLoader" style="display:none">
+		<img src="./images/hexagonLoader.png" id="hexLoader" style="width:50px;">
+	</div>
+	
+<!-- ===========================================NAVBAR======================================================================= -->
+<div class="navbar">
+	<img src="./images/apogeeLogo.png" class="apogeeLogo" style="cursor:pointer;"/>
+</div>
+
+<!-- ============================================LANDING==================================================================== -->
+	<!--New Change-->
+	<div class="header" style="display:none">
+	  <div class="headerButton hvr-sweep-to-right" id="registerButton">REGISTER</div>
+	  <div class="headerButton" id="loginButton"><div class="loginButtonText">&nbsp;LOGIN<img src="./images/closeLogin.png"></div></div>
+	
+	  <div class="headerButton" id="profileButton">PROFILE</div>
+	  <div class="headerButton" id="logoutButton">LOGOUT</div>
+	  	  
+
+	  <div id="loginFormModal">
+	  	<form id="loginForm">
+			<input type="email" name="email" placeholder="Email Address" autocomplete="off">
+			<input type="password" name="password" placeholder="Password" autocomplete="off">
+			<input type="button" value="Submit" id="loginSubmit"><br>
+			<!-- <hr>
+			<input type="button" value="Login with Facebook" id="facebookLoginButton"> -->
+			<!-- <input type="button" value="Login with Google Plus" id="googleLoginButton"> -->
+		</form>
+		<span id="loginComment"></span>
+	  </div>
+	</div>
+
+
+<div id="landing" class="largestContainer">
+	
+
+	<!--New Change-->
+
+	<div class="sidebar"></div>
+	
+	<div id="container">
+		<canvas id="mainCanvas" width="1366" height="768" style="width: 1366px; height: 768px; position: absolute;"></canvas>
+	</div>
+	<div id="chromeExp"><span style="font-size: 2em;font-weight: 700;">WebGL Globe</span><br>Inspired from a Chrome Experiment </div>
+	<div id="update">Contact our official travel Partner at +917597677397 and +918886988686. Click <a href="http://bits-apogee.org/data/APOGEE 2015 Schedule.xlsx">here</a> to download the schedule for APOGEE'15</div>
+	<div class="registerScreen">
+		<img src="./images/close.png" class="closeIcon">
+		<div class="regForm blurPageContent">
+			<div class="registerText">Register</div>
+			<div class="registerIcons">
+				<div class="fbIcon" onclick="facebookLogin()">
+					<img src="./images/fbIcon.png">
+				</div>
+				<div id="gSignInWrapper">
+					<span class="label" style="display:none;">Sign in with:</span>
+					<div id="customBtn" class="customGPlusSignIn">
+						<img src="./images/gIcon.png">
+						<span class="icon" style=""></span>
+						<span class="buttonText" ></span>
+					</div>
+				</div>
+			</div>
+			<div class="rSeparator">
+				<div class="registerSeparator"></div>
+				<div class="separatorText">or</div>
+				<div class="registerSeparator"></div>
+			</div>
+			<form id="registerForm" autocomplete="off">
+				<input type="text" name="name" placeholder="Name"/ id="nameField">
+				<input type="email" name="email" placeholder="Email"/ id="emailField">
+				<input type="text" name="phone" placeholder="Phone No."/ id="phoneField">
+				<div class="genderFemale genderSelect" id="f">Female</div><div class="genderMale genderSelect" id="m">Male</div>
+				<input type="text" name="college" placeholder="College"/ id="collegeField">
+				<input type="button" class="registerFormbutton" value="Submit">
+			</form>
+		</div>
+		
+		<div class="sponsorsForm blurPageContent">
+			<div class="sponsorsText">SPONSORS</div>
+			<div id='sponsorsData' class='sponsorsData nano' style="width:96%;height:calc(100% - 200px);">
+               <div class="nano-content">
+	               <div class="sponsorsInner">
+						<div id="asstitlesponsor"  class="sponsors">
+							<p>Associate title sponsor</p>
+							<img src="logos/a1.jpg" />
+						</div>
+						<div id="internationalsponsor"  class="sponsors">
+							<p>International sponsors</p>
+							<img src="logos/i1.png"  class="imgAlt"/>
+						</div>
+						<div id="goldsponser" class="sponsors">
+							<p>Gold Sponsor</p>
+							<img src="logos/g1.jpg" class="imgAlt" />
+							<img src="logos/g2.jpg" width="250px" height=auto />
+						</div>
+						<div id="silversponsor"  class="sponsors">   
+							<p>Silver Sponsors</p>
+							<img src="logos/s1.jpg" />
+							<img src="logos/s2.jpg" />
+							<img src="logos/s3.jpg" />
+							<img src="logos/s4.jpg" />
+							<img src="logos/s5.png" />
+							<img src="logos/m1.jpg" />
+						</div>
+						<div id="hacksponsor"  class="sponsors" >
+							<p>Hackathon title sponsor</p>
+							<img src="logos/ha1.jpg" />
+						</div>
+						<div id="offindulgencepart"  class="sponsors">
+							<p>Official Indulgence partner</p>
+							<img src="logos/ind1.jpg" />
+						</div>
+						<div id="offhospitalitypart"  class="sponsors">
+							<p>Official hospitality sponsor</p>
+							<img src="logos/h1.jpg" />
+						</div>
+						<div id="onlinetravelpart"  class="sponsors">
+							<p>Online travel partner</p>
+							<img src="logos/t1.jpg"  class="imgAlt"/>
+						</div>
+						<div id="onlineshoppingpart"  class="sponsors">
+							<p>Online shopping partner</p>
+							<img src="logos/sh1.jpg" />
+						</div>
+						<div id="hardwarepart"  class="sponsors">
+							<p>Gaming Partner</p>
+							<img src="logos/hw1.png" />
+						</div>
+						<div id="hardwarepart"  class="sponsors">
+							<p>Networking Partner</p>
+							<img src="logos/nw1.jpg" />
+						</div>
+						<div id="eventpart"  class="sponsors">
+							<p>Event partner</p>
+							<img src="logos/e1.jpg" />
+						</div>
+						<div id="offtravelpart"  class="sponsors">
+							<p>Official Travel partner</p>
+							<img src="logos/otp1.png" /><br>
+							Contact our travel partner at +91 7597677397 and +91 8886988686
+						</div>
+						<div id="innovationpart"  class="sponsors">
+							<p>Innovation partner</p>
+							<img src="logos/inv1.png" /><br>
+						</div>
+						<div id="mediapart"  class="sponsors">
+							<p>Media partner</p>
+							<img src="logos/me1.png" />
+						</div>
+						<div id="workshoppart"  class="sponsors">
+							<p>Workshop partner</p>
+							<img src="logos/w1.png" />
+							<img src="logos/w2.jpg"  class="imgAlt"/>
+						</div>
+						<div id="workshoppart"  class="sponsors">
+							<p>Merchandise partner</p>
+							<img src="logos/mer1.jpg" />
+						</div>
+						
+
+
+						<div id="onlinemediapart"  class="sponsors">
+							<p>Online Media partner</p>
+							<img src="logos/onl1.png"  style="width:500px;height: auto"/>
+							<img src="logos/onl2.jpg"  style="width:500px;height: auto"/>
+							<img src="logos/onl3.jpg"  style="width:500px;height: auto"/>
+							<img src="logos/onl4.png"  style="width:500px;height: auto"/>
+							<img src="logos/onl5.jpg"  style="width:500px;height: auto"/>
+							<img src="logos/onl6.jpg"  style="width:500px;height: auto"/>
+						</div>
+						<div id="onlinepart"  class="sponsors">
+							<p>Online partner</p>
+							<img src="logos/o1.png" />
+						</div>
+						
+						<br>
+						<div style="font-size: 30px">
+						<a href="data/sponsors.pdf" target="_blank">Click Here</a> to download the Sponsors' brochure !
+						</div>
+					</div>
+				</div>
+
+
+            </div>
+		</div>
+
+
+		<div class="contactForm blurPageContent">
+			<div class="contactText">Contacts</div>
+			<div class="nano">
+			<div id='contactWrapper' class='contact nano-content' style="margin-top: 30px; overflow:scroll;">
+                <div class="left">
+                    <p>
+                        <span>President</span><br />
+                        V.V.Sai Praneeth<br />
+                        +91-7891799999<br />
+                        president[at]pilani.bits-pilani.ac.in<br />
+                    </p><br /><br>
+                    <p>
+                        <span>General Secretary</span><br />
+                        Ashutosh Ajay Mundhada<br />
+                        +91-7737485915<br />
+                        gensec[at]pilani.bits-pilani.ac.in<br />
+                    </p><br /><br>
+                    <p>
+                        <span>For projects,events and registration</span><br />
+                        Vidushi Dwivedi<br />
+                        +91-8854877550<br />
+                        controls[at]bits-apogee[dot]org<br />
+                    </p><br />
+
+		
+                </div>
+                <div class="center">
+                    <p>
+                        <span>For sponsorship and marketing</span><br />
+                        Sumantra Sharma<br />
+                        +91-9772227757<br />
+                        sponsorship[at]bits-apogee[dot]org<br />
+                    </p><br /><br>
+                    <p>
+                        <span>For invites and correspondence</span><br />
+                        Mayank Juneja<br />
+                        +91-9772064316<br />
+                        pcr[at]bits-apogee[dot]org<br />
+                    </p><br /><br>
+                    <p>
+                        <span>For paper presentations and guest lectures</span><br />
+                        Archit Gadhok<br />
+                        +91-9772221902<br />
+                        pep[at]bits-apogee[dot]org<br />
+                    </p><br />
+                    <p style="font-size: 15px;line-height: 20px;font-weight: bold;margin-top: -15px;">For travel related issues, contact our Official travel Partner at +91 7597677397 and +91 8886988686</p>
+                    
+                </div>
+                <div class="right">
+                    <p>
+                        <span>For reception and accommodation</span><br />
+                        Akshay Singh Bisht<br />
+                        +91-9636946278<br />
+                        reccnacc[at]bits-apogee[dot]org<br />
+                    </p><br /><br>
+                    <p>
+                        <span>For Publicity and Online Partnership</span><br />
+                        Apoorva Pakhle<br />
+                        +91-9660575881 <br />
+                        adp[at]bits-apogee[dot]org<br />
+                    </p><br /><br>
+                    <p>
+                        <span>For website and other technical queries</span><br />
+                        Sahib Singh Dhanjal<br />
+                        +91-9772227370<br />
+                        dvm[at]bits-apogee[dot]org<br />
+                    </p><br /><br>
+                </div>
+            </div>
+            </div>
+		</div>
+		
+		<div class="participationForm blurPageContent">
+			<div class="participationText">Participation</div>
+			<div class="participationToogle">
+				<ul>
+					<li class="participationSwitch rp active" dat="overview"> OVERVIEW </li>
+					<li class="participationSwitch ov inactive" dat="howToReachPilani"> HOW TO REACH PILANI </li>
+					<li class="participationSwitch oc inactive" dat="accomodation"> ACCOMMODATION </li>
+				</ul>
+			</div>
+			<div id='participationData' class='participationData nano' style="width:96%;height:calc(100% - 300px);">
+				<div class="nano-content">
+					<div class="participationInner accomodationData" style="display:none;">
+						<span class="head">Accommodation:</span>
+						<br><br>
+						All registered participants that come to Pilani will be provided accommodation on the campus.
+						<br><br>
+						Colleges will share a dormitory style room with a capacity of 25-30 people.
+						Bedding, buckets and extension cords will be provided.
+						The accommodation is free of cost, but a caution deposit of Rs. 200 per participant will be collected which will be refunded at the time of checkout, provided there is no damage to the room, bedding and so on.
+						No issues regarding change of accommodation will be entertained since all the accommodation centers are pre-checked by us.
+						<br><br>
+						<span class="head">Hospitality:</span>
+						<br><br>
+						There will be a Hospitality counter open 24 hours at the "Reception & Accommodation" hut, to help you with further queries once you have arrived on campus.
+						A hospitality number will also be provided for all the queries pertaining to the same.
+					</div>
+
+				   <div class="participationInner overviewData"  style="display:block">
+						Create an APOGEE account.
+						<br><br>
+						Your password will be mailed to you.
+						<br><br>
+						APOGEE has pre-registration events for which you can register online, apart from various On-the-Spot Registration events. You can register for these pre-registration events after logging in from your APOGEE user account.
+						<br><br>
+						To register in an event, navigate to that event and click the "Register for this event" button.
+						<br><br>
+						To upload a paper/project abstract. Click on the papers/projects tab below. Click on the register tab and follow the link. Fill in necessary details and upload your paper/project abstract in the respective portal.
+						<br><br>
+						To create a team, first go to your events(eg Trackomania )box and click register. If you are the team leader, click on create team, else join team ( You can see this option only in team events ).Then you'll recieve a code. Share it with your team members. 
+						<br><br>
+						To join a team, go to the register tab in the event page and click Join team. Then enter the team-id that your team member has given you.
+						<br><br>
+						<span class="head">Confirmation</span>
+						<br><br>
+						Only the participants who have received a confirmation mail with a confirmation ID from registration[at]bits-apogee.org are confirmed participants eligible to attend APOGEE 2015. This holds for both pre-registration and On-the-Spot registration events.
+					</div>
+
+					<div class="participationInner howToReachPilaniData" style="display:block;">
+							<div id="map"></div>
+						   <span class="head">Travelling by car/taxi from Delhi</span> 
+						   <br><br>
+							There are three routes to get here, distance is 200 or 220 km depending on route taken and time taken is about 4.5 hours. In preferential order the routes are: Delhi-Gurgaon-Dharuheda-Rewari-MahendraGarh-Loharu-Pilani Delhi-Gurgaon-Dharuheda-Rewari-Narnaul-Singhana-Chirawa-Pilani Delhi-Rohtak-Bhiwani-Loharu-Pilani
+							<br><br>
+							<span class="head">Travelling by bus from Delhi</span>
+							<br><br>
+							In case you prefer to travel by public transport, you need to catch a bus at the Inter State Bus Terminal (ISBT), Kashmiri Gate, Delhi. There are frequent buses to Pilani from Delhi from around 4:55 AM to 10:00 PM.
+							<br><br>
+							<span class="head">Travelling by bus from Jaipur</span>
+							<br><br>
+							In case you prefer to travel by public transport, you need to catch a bus from the State Bus Terminal (Sindhi Camp), Jaipur. There are frequent buses to Pilani starting from Jaipur from around 4:00 AM till mid-night.
+							<br><br>
+							<span class="head">Travelling by train from Delhi</span>
+							<br><br>
+							Trains run from Delhi-Sarai Rohilla to Loharu (26 km from Pilani). From Loharu you can take a bus or cab to Pilani.
+							<br><br><br>
+							Use the map for further reference.
+							<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="papersProjForm blurPageContent">
+			<div class="papersProjText">PAPERS & PROJECTS</div>
+			<div class="papersProjToogle">
+				<ul>
+					<li class="papersProjSwitch ppr active" dat="papers"> PAPERS </li>
+					<li class="papersProjSwitch proj inactive" dat="projects"> PROJECTS </li>
+				</ul>
+			</div>
+			<div id='papersProjData' class='papersProjData' style="width:96%;height:calc(100% - 300px);overflow:hidden">
+				<div class="papersProjInner papersData"  style="display:block">
+                	<ul id="papersInnerList" class="paperProjInnerList">
+						<li id="lipaperOverview" class="activeInnerListPaper">OVERVIEW</li>
+						<li id="lipaperFaq">FAQS</li>
+						<li id="lipaperResources">RESOURCES</li>
+						<li id="lipaperRules">RULES</li>
+						<li id="lipaperCategories">CATEGORIES</li>
+						<!--<li id="lipaperRegister">REGISTER</li>-->
+					</ul> 
+					<div class="nano" style="float:left;width: calc(100% - 260px);height:90%">
+					<div class="nano-content">
+					<div id="paperOverview" style="display:block;text-align:justify;" class="paperInnerContent">
+						<br><br>
+						Paper presentation is a competition where the participants exhibit the results of their scientific investigations or researches. It is a platform for all the ingenious minds out there to showcase their intense knowledge and communicative skills to the audience in an intriguing manner through an oral presentation using means such as slides, graphs etc. The dates of the announcement of the result will be released soon.
+						<br><br>
+						For further details contact :
+						<br><br>
+						Archit Gadhok
+						<br>
+						+91-9772221902
+						<br>
+						pep[at]bits-apogee[dot]org
+					</div>
+					<div id="paperFaq" style="display:none;text-align:justify;"  class="paperInnerContent">
+						<br><br>
+						How do I upload my Abstract for screening? 
+						<br><br>
+						<ul>
+							<li>Click on the "register" tab below</li>
+							<li>Follow the link</li>
+							<li>Fill in the necessary details and upload the abstract.</li>
+						</ul>
+					</div>	
+					<div id="paperResources" style="display:none;"  class="paperInnerContent">
+						<br><br>
+						Click <a href="http://bits-apogee.org/paper/format and categories (1).docx">here</a> to download the paper presentation abstract format.
+						<br><br><br>
+					</div>
+					<div id="paperRules" style="display:none;text-align:justify;"  class="paperInnerContent">
+						<br><br>
+						<ul>
+							<li>The results for the abstracts will be declared by 20th February.</li>
+							<li>If you are unable to login, mail your abstract to pep@bits-apogee.org.Mention the title of your paper, category, author and co-author username and your college.</li>
+							<li>Papers to be presented during APOGEE 2015 will be selected on the basis of the abstracts uploaded online. For this, full papers must not be uploaded; only abstracts should be uploaded. After screening, selected participants will have to upload their full papers.</li>
+							<li>Participants have to upload their Abstracts for screening in the appropriate format on the Apogee 2015 website. The prescribed format must be followed failing which may lead to disqualification of the participants. The deadline for abstract submission is 9th February, 11:59pm. The format for abstract is available on website itself.</li>
+							<li>Only genuine and original paper abstracts should be uploaded. Abstracts found copied from any source like internet/ journals etc. will be disqualified.</li>
+							<li>Only undergraduate and post graduate students of any recognized university can participate.</li>
+							<li>A maximum of 2 students per team are allowed to present a paper (one as author and another as co-author). In case of team participation, both the members are required to be present on the spot of the event. Participants from different institutions can also form a team.</li>
+							<li>Participants can present same paper (in the case of the paper being on an inter-disciplinary subject) in not more than 2 categories. Also, Participants can present more than one paper within the same category. However, the abstracts should be sent separately.</li>
+							<li>The presentations should be in .ppt(not .pptx) or .pdf format (preferably .pdf). Microsoft Office 2003/ Adobe acrobat Reader will be provided. The presentation room will have LCD projector.</li>
+							<li>The time limit for one presentation will be 8 minutes. Buzzer will be rung after 6 minutes to remind the participants about the time and a final buzzer will be rung at the end of 8 minutes. Any extension in the allotted time will result in loss of points.</li>
+							<li>No requests regarding change in schedule of the paper presentation will be entertained under any circumstances.</li>
+							<li>Participants must make sure that their participation in APOGEE does not lead to violation of Copyright laws of any conferences/ seminars they have previously attended.</li>
+							<li>The abstract as well as the papers will be judged on the basis of their innovation, knowledge of the field and presentation skills. The decision of the judges will be final and binding.</li>
+							<li> The results will be declared on the last day of APOGEE. All participants and winners will be awarded certificates on the same day.</li>
+							<li>Plagiarized content will be strictly dealt with and would lead to participant's disqualification. In case of any discrepancy, organizers decision will be final and binding.</li>
+						</ul>
+						<br><br><br>
+					</div>
+					<div id="paperCategories" style="display:none;text-align:justify;"  class="paperInnerContent">
+						<br><br>
+						The papers can be of two types:
+						<ul>
+							<li>Technical papers which describe the experiments performed by you and further scope of research. </li>
+							<li>Review papers which study a particular topic followed by a detailed hypothesis and a plan of action.</li>
+						</ul>
+						<br>
+						The various categories of paper presentation include:
+						<br>
+						Basic Sciences
+						<ul>
+							<li>Biological Sciences</li>
+							<li>Physics</li> 
+							<li>Chemistry</li> 
+							<li>Mathematics</li>
+						</ul>
+						<br>
+						Engineering
+						<ul>
+							<li>Chemical</li>
+							<li>Civil </li> 
+							<li>Computer Science</li> 
+							<li>Electrical & Electronics</li>
+							<li>Electronics & Communication</li>
+							<li>Electronics & Instrumentation</li>
+							<li>Material Science </li>
+							<li>Mechanical</li>
+						</ul>
+						<br>
+						Humanities
+						<ul>
+							<li>Philosophy</li>
+							<li>Psychology</li> 
+						</ul>
+						Miscellaneous
+						<ul>
+							<li>Economics and Finance</li>
+							<li>Pharmacy</li>
+							<li>Management</li>
+							<li>Environmental Science</li>
+						</ul>
+						<br><br><br>
+					</div>
+					<!--<div id="paperRegister" style="display:none;"  class="paperInnerContent">
+						<br><br>
+						The registrations are now closed.
+					</div>-->
+					</div>
+					</div>
+				</div>
+                <div class="papersProjInner projectsData" style="display:none">
+                	
+					<ul id="projInnerList" class="paperProjInnerList">
+						<li id="liprojOverview" class="activeInnerListProj" >OVERVIEW</li>
+						<li id="liprojGuidelines">GUIDELINES</li>
+						<li id="liprojRules">RULES</li>
+						<li id="liprojCategories">CATEGORIES</li>
+						<li id="liprojSchedule">SCHEDULE</li>
+						<!--<li id="liprojRegister">REGISTER</li>-->
+					</ul> 
+					<div class="nano" style="float:left;width: calc(100% - 260px);height:90%">
+					<div class="nano-content">
+					<div id="projOverview" style="display:block;text-align:justify" class="projInnerContent">
+						<br><br>
+						BITS Pilani welcomes projects in various fields of Science and Engineering for APOGEE. With over 250 projects coming from all parts of the country in last year’s competition, it is sure to provide you with an unparalleled academic experience.
+						<br><br>
+						The project presentation competition at BITS Pilani features projects from a variety of scientific research areas. With categories dedicated to both evergreen fields like infrastructure and new frontiers of technology such as simulations or mathematical modeling, we assure you a platform beyond compare.
+						<br><br>
+						Keep checking our <a href="http://prototype-apogee.blogspot.in/" style="text-decoration:none;">blog</a> for further updates.
+						<br><br>
+						The last date for abstract submissions is <strong>7th of March</strong>. 
+						<br><br>
+						For further details contact :
+						<br><br>
+						Vidushi Dwivedi
+						<br>
+						+91-8854877550
+						<br>
+						controls[at]bits-apogee[dot]org
+					</div>
+					<div id="projGuidelines" style="display:none;text-align:justify" class="projInnerContent">
+						<br><br>
+						For Outstation participants only.
+						<br><br>
+						Follow these instruction to upload the abstract:
+						<br>
+						<ul>
+							<li>Click on the "register" tab below</li>
+							<li>Follow the link</li>
+							<li>Fill in the necessary details and upload the abstract.</li>
+						</ul>
+					</div>
+					<div id="projRules" style="display:none;text-align:justify" class="projInnerContent">
+						<br><br>
+						<ul>
+							<li>Students of BITS-Pilani, Pilani Campus should not upload their abstracts on the website. Any such abstracts will not be considered.</li>
+							<li>A team cannot consist of more than 6 members including team leader.</li>
+							<li>Abstracts should be only of the specified format.</li>
+						</ul>
+					</div>
+					<div id="projCategories" style="display:none;text-align:justify" class="projInnerContent">
+						<br><br>
+						A project is defined as an activity with an aim to formulating a problem and presenting a solution to it using existing/emerging/novel concepts and/or technologies.
+						<br>
+						The following are descriptions of the 15 categories under which projects can be presented in Prototype 2015:
+						<br><br>
+						Automation:<br><br>
+						Automation is the use of control systems to control process and/or machinery replacing human operators. Projects competing under this category aim at reducing the need for human sensory, physical and/or mental requirements and minimizing error.<br><br><br>
+						Communication and Network Systems:<br><br>
+						The projects deal with the collection/ transmission/ collation/ dissemination etc of information. New applications on existing networks and/or new network system designs are solicited.<br><br><br>
+						Design Appliances:<br><br>
+						The projects aim at conceptualization and/or development of a new or improved appliance, having their application in any of the varied spheres of human activity. An appliance is a device composed of hardware components dedicated to a specific function.<br><br><br>
+						Economic Modelling and Finance:<br><br>
+						This category would deal with the understanding of an enterprise business and improving its performance through creation of economic models (enterprise models). This will include modelling of the relevant business domain (relatively stable) and business processes (relatively volatile). Projects related to the current or probable future economic scenario or aimed at improving the same and projects that aim to provide reasons and solutions to imminent financial issues would also be included.<br><br><br>
+						Health and Nutrition:<br><br>
+						The projects aim at maintaining, restoring and improving human health through study, diagnosis, treatment and possible prevention of disease and injury as well as studying the metabolic and physiological responses of body to diet, metabolic pathways etc.<br><br><br>
+						Energy:<br><br>
+						This category includes projects dealing with sustainable forms of energy which are eco-friendly in nature. It also includes projects focusing on innovative techniques that will help in conserving energy to curb the current energy crisis.<br><br><br>
+						Environment:<br><br>
+						This category calls for projects dealing with environment-friendly technical opportunities for environmental improvement and sustainability by promoting better protection, conservation or management of natural resources that will enhance the delivery of environmental services by communities. <br><br><br>
+						Infrastructure:<br><br>
+						The projects have application/concepts in the network of factors which enables a country's economy/local infrastructure or an industrial operation to function effectively. This includes such matters as transport, power, finances, housing, and education.<br><br><br>
+						Industrial Processes and Applications:<br><br>
+						The projects related to the various processes and applications in industry. Innovative ideas for existing processes and new, economical process applications will be appreciated.<br><br><br>
+						Materials Science:<br><br>
+						The projects involve the use/modification of properties of matter and its applications to various areas of engineering and sciences. Also solicited are projects dealing with development of new materials for specific/general use in society.<br><br><br>
+						Pure Sciences:<br><br>
+						This category would call for projects which involve basic principles of the three branches of science namely Physics, Chemistry and Biology. Projects involving applications of more than one branch will be preferred.<br><br><br>
+						Software Design (Application Development):<br><br>
+						A chance to prove one’s intellect, creativity & expertise at software development, this category gives one complete freedom to decide the objective and genre of the software and the platform to be used to develop it. The main focus is on innovation, utility, implementation and other relevant parameters of such projects. Novelty of the idea and potential to bring about a revolution in the concerned field will be given due credit.<br><br><br>
+						Software Design (Adaptive Technology):<br><br>
+						A category exclusively concerned with the design and development of applications that allow computers to evolve some sort of intelligence of their own. This category includes projects which display ingenuity in the fields of Artificial Intelligence, Machine Learning, Natural Language Processing, Swarm/Business/Social/Computational Intelligence, and Computer Vision, among others. Projects will be evaluated both on the basis of how sensitive the systems are to the outside stimulus and the self-learning and decision making capability of the system.<br><br><br>
+						Signal Processing:<br><br>
+						This category includes projects involving the analysis, interpretation and manipulation of signals. Signals of interest would include sounds, images etc. Also included are projects with applications capable of converting signals from one form to another and/or effective presentation of the same for efficient utilization of information contained in them.<br><br><br>
+						Simulation and Mathematical Modelling (Chemical):<br><br>
+						The projects in this category describe the use of computer aided modelling and simulation in the development, integration and optimization of industrial processes. Mathematical modelling is used to result interpretation, full-scale process performance analysis and further demonstrate similitude comparisons of experimental results from different systems as a tool for broadening the applicability of the calculation methods.<br><br><br>
+						Simulation and Mathematical Modelling (Non-chemical):<br><br>
+						Any real world phenomenon, be it in financial infrastructure, computer algorithm or mechanical design has a mathematical formulation as its basis. Projects in this category model the same.<br><br><br>
+						Transportation:<br><br>
+						This category includes projects related to various modes of transport as in air, water and road. The project should basically be designed to provide a rapid, safe and economically compatible movement of people and goods. Various projects related to road network, railways etc. can be included.<br><br><br>
+					</div>
+					<div id="projSchedule" style="display:none;text-align:justify" class="projInnerContent">
+						<br><br>
+						Below is the schedule for the Finals of APOGEE 2015.  This schedule is unlikely to change, but the likelihood of the same cannot be completely ruled out.
+						<br><br><br>
+						26th March, 2015 (Thursday):
+						<br><br>
+						Communication and Network Systems
+						<br>
+						Design Appliances
+						<br>
+						Pure Sciences (Biology)
+						<br>
+						<!--Industrial Processes and Applications – 1210
+						<br>
+						Signal Processing – 1207
+						<br>
+						Software Design (Adaptive Technology) – 1209
+						<br>
+						Software Design (Application Development) – 1208
+						-->
+						<br><br><br>
+						27th March, 2015 (Friday):
+						<br><br>
+						Industrial Processing and Applications
+						<br>
+						Mathematical Modelling and Simulation (Non Chemical)
+						<br>
+						Health and Nutrition
+						<!--<br>
+						Infrastructure – 1220
+						<br>
+						Materials Science – 1208
+						<br>
+						Simulation and Mathematical Modelling (Chemical) – 1233
+						<br>
+						Design Appliances - 3203-->
+						<br><br><br>
+						28th March, 2015 (Saturday):
+						<br><br>
+						Automation
+						<br>
+						Economic Modelling and Finance
+						<br>
+						Software Design (Application Development)
+						<br>
+						Software Design (Adaptive Technology)
+						<br>
+						Material Sciences
+						<br>
+						Signal Processing
+					</div>
+					<!--<div id="projRegister" style="display:none;" class="projInnerContent">
+						<br><br>
+						Click <a href="http://bits-apogee.org/projects/">here</a> to register. For outstation praticipants only.
+					</div>-->
+					</div>
+					</div>
+				</div>
+            </div>
+		</div>
+		
+		<div class="lectureForm blurPageContent">
+			<div class="lectureText">LECTURES</div>
+			<div id='lectureData' class='lectureData nano' style="width:96%;height:calc(100% - 200px);">
+                <div class="nano-content">
+				<div class="lectureInner"  style="display:block;text-align:justify ">
+					<br><br>
+					The Think Again Conclave, the guest lecture series during APOGEE is one event that amazingly explores a broad spectrum in a brief span. The past speakers, with exemplary portfolios in different fields have left no stone unturned  in enthralling the audience with their knowledge and skills. Nobel Laureates, Ig-Nobel Laureates, CEO's, scientists, professors and some of the great minds of this century have graced the past editions of the conclave, imparting it with an all new dimension. 
+					<br><br>
+					Think Again is everything but an ordinary conventional lecture series. It aims at capturing the ideas and thoughts of those who have dared to think differently and out of the box in their field of interest. Since its inception in 2012, this lecture series has been a platform for an assortment of speakers ranging from Jeff Lieberman of “Time Warp” fame to Pawan Agarwal, the CEO of Mumbai Dabbawalas. It was also with Think Again that the first Ig Nobel Prize Winners' conference in India was organized. Other prominent personalities who have attended Think Again include adman Piyush Pandey and 'Chief Belief Officer' of Future Group Dr. Devdutt Pattanaik.
+					<br><br>
+					The third edition featured thought provoking lectures by Dr. Walter Lewin (Professor Emeritus, MIT) and Mr. Ryan Woodward (Animator, Marvel) that left the audience in awe of their sheer brilliance on stage. John Beck Hoffman (Director of Photography, NASA), Dr. Johanna Blakley (Director, The Norman Lear Center), Mr. Mansoor Khan (Indian Film-maker and Author) and Dr. Anil Gupta (Founder, Honey Bee Network) were also a part of the conclave.
+					<br><br>
+					<img src="./images/lec.png" style="display:block;margin:auto;">
+					<br><br>
+					
+				</div>
+				</div>
+            </div>
+		</div>
+
+		<div class="profileForm blurPageContent">
+			<div class="profileText">Profile</div>
+			<div id='profileData' class='profileData' style="width:96%;height:calc(100% - 230px);overflow: hidden">
+            	<div id="profileInfo" class="profileInfo">
+            		<div id="infoName"  class="mainInfo">
+            			Name : 
+            			<div id="nameBlock"></div>
+            		</div>
+            		<div id="infoCollege"  class="mainInfo">
+            			College : 
+            			<div id="collegeBlock"></div>
+            		</div>
+            		<div id="infoEvents"  class="mainInfo">
+            			Registered Events : 
+            			<div id="eventBlock"></div>
+            			
+            		</div>
+            		<br><br>
+            		<div id="pdflink"  class="mainInfo">
+            			<a href="./2015/registration/getpdf/" target="_blank"><b>NEW! </b>Download Confirmation Letter</a>
+            			
+            		</div>
+            	</div>
+            	<div id="profileEvents" class="profileEvents">
+            		<div style="font-size:25px; line-height: 30px">REGISTERED EVENTS : </div><br>
+            		<div class="nano" style="height:calc(100% - 70px)">
+            			<div class="nano-content">
+            			
+            		<div id="individualEvents" style="width:calc(100% - 20px)">
+            			
+            		</div>
+            		</div></div>
+            	</div>
+            </div>
+		</div>
+		
+		
+		
+		<div class="collegeSearch">
+			<div class="collegeSearchText">Searching <br/><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspColleges</span></div>
+			<img src="./images/hexagonLoader.png" class="hexagonLoader">
+			<div class="collegeSearchBox"></div>
+		</div>
+		<!--Use this to put modal anywhere-->
+		
+		<div class="modalScreen">
+			<div class="modalBox">
+				<div class="modalBoxText"></div>
+				<div class="modalBoxButton"></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- ==============================================SEARCH==================================================== -->
+
+
+<div class="fbLik">
+<div class="fb-like" data-href="http://facebook.com/bits-apogee" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+</div>
+
+<div id="searchIcon"><img src="./images/iconSearch.png"/>
+</div>
+	
+<div id="search">
+	<div id="searchHeader">
+		<div id="iconSearchInnerWrapper"><img id="iconSearchInner" src="./images/iconSearch.png" /></div>
+		<input id="searchField" type="textfield" placeholder='Search here'></input>
+		<img id="iconBack" src="./images/iconBack.png" />
+	</div>
+	<div class="innerHead">Seach Results</div>
+	<div id="searchResults"></div>
+	<div class="innerHead">Categories</div>
+	<div id="categories">
+		<div class="category kernelfil">KERNEL EVENTS</div>
+		<div class="category filter">BUILD AND DESIGN</div>
+		<div class="category filter">CODE & SIMULATE</div>
+		<div class="category filter">AUTOMATION</div>
+		<div class="category filter">ONLINE EVENTS</div>
+		<div class="category filter">ECONOMANIA</div>
+		<div class="category filter">DEVELOP & DISCOVER</div>
+		<div class="category filter">QUIZZES</div>
+		<div class="category filter">MISCELLANEOUS</div>
+		
+	</div>
+</div>
+<!-- ===========================================EVENTS====================================================================== -->
+	
+<div id="eventsWrapper" class="largestContainer">
+	<div id="events">
+		<div id="eventsContainer"></div>
+		<div id="lightBox" class="lightBox">
+			<div id="lightBoxContent">
+				<div id="eventImageWrapper"></div>
+				<div id="eventDescriptionWrapper"></div>
+				<img id="closebtn" src="./images/iconClose.png" onclick="closeLightBox()"/>
+				<div id="eventDescription">
+					<div id="eventName"></div>
+					<div id="iconList" class="content">
+						<div class="eventInfoIcon" id="Icon_register"></div>
+						<div class="realTabList"></div>
+					</div>					
+					<div id="outerWrapper" class="nano">
+						<div class="nano-content content" id="innerWrapper">
+							<div id="infoHeader"></div>
+							<div id="info" class="nano-content content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- =========================================WORKSHOPS======================================================================= -->
+	<div id="workshopContainer" class="largestContainer">
+		<div class="workshopWrapper" id="workshopWrapper">
+			<div id="overlay"></div>
+			<div id="contentWorkshop" style="position:relative;">
+				<div id="workshopName"></div>
+				<div id="workshopDesc"></div>
+				<a id="readMore" href="#" target="_blank">READ MORE</a>
+			</div>
+		</div>
+		<div class="workshopArrow" id="nextArrow"></div>
+		<div class="workshopArrow" id="prevArrow"></div>
+		<div class="shortcutButtons"></div>
+		
+	</div>
+<!-- ========================================SCRIPTS========================================================================== -->
+	<!-- Loading Scripts -->
+
+	<!--Globe helper Scripts-->
+	<script type="text/javascript" src="./javascripts/loader.js?n=1"></script>
+	<script type="text/javascript" src="./javascripts/Detector.js?n=1"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js?n=1"></script><!--Replace this by google CDN in the production version-->
+	<script type="text/javascript" src="./javascripts/stackBlur.js?n=1"></script>
+	<script type="text/javascript" src="./javascripts/fuse.min.js?n=1"></script>
+	<!--Main globe Script-->
+	<script type="text/javascript" src="./javascripts/globe.js?n=1"></script>
+	<!--Data Script-->
+	<script type="text/javascript" src="./javascripts/loadData.js?n=1"></script>
+	<script type="text/javascript" src="./data/collegeData.js?n=1"></script>
+	<!--Other Script-->
+	<script type="text/javascript" src="./javascripts/landing.js?n=1"></script>
+	<script type="text/javascript" src="./javascripts/blurScript.js?n=1"></script>
+	<script type="text/javascript" src="./javascripts/modalScript.js?n=1"></script>
+	<!-- Events Scripts -->
+	<script type="text/javascript" src="./data/events.json?n=1"></script>
+	<script type="text/javascript" src="./javascripts/events.js?n=1"></script>
+	<!-- Workshop Scripts -->
+	<script type="text/javascript" src="./javascripts/workshop.js?n=1"></script>
+	<!-- Custom Scroller -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.4/javascripts/jquery.nanoscroller.min.js?n=1"></script>
+	<!-- Maps Script -->
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="./javascripts/customMap.js?n=1"></script>
+
+
+	<script>
+		$(".nano").nanoScroller();
+	</script>
+	
+	
+	<script>
+	
+	function removeMainLoader()
+	{
+		
+		if(areImagesLoaded && backroundImageLoaded)
+		{
+			
+			//console.log("Finally The time has come...Unveiling");
+			$(".loader").fadeOut(600,function(){$(".header").fadeIn(300)});
+			google.maps.event.addDomListener(window, 'load',initialize);
+
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-9546354-3', 'auto');
+			  ga('send', 'pageview');
+
+			  	// FB LIKE BUTTON SCRIPT 
+
+			  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1526377564302400',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+			<!-- render(); -->
+
+			return;
+		}
+		//console.log("Not Now..Please Wait");
+	}
+	
+	
+	</script>
+	
+	<!-- GOOGLE REGISTER SCRIPT -->
+	<!-- <script src="https://apis.google.com/js/client:platform.js" async defer></script> -->
+	
+</body>
+</html>

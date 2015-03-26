@@ -1,0 +1,421 @@
+body
+{	
+	margin:0;
+	overflow:hidden;
+}
+#eventsContainer
+{
+	width:200%;
+	background-color:black;
+	height:100%;
+}
+p{
+margin:0;
+}
+/*==============================================EVENT DIV STYLING=============================================*/
+#eventsWrapper
+{
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+#events
+{
+	height:calc(100% + 0px);
+	overflow:auto;
+	position:relative;
+	width:calc(100% + 0px);
+	background-color:rgb(0,0,0);
+	overflow:hidden;/*remove this if any problem*/
+}
+.event
+{	
+	width:10.005%;
+	height:20%;
+	float:left;
+	background-color:black;
+	background-size:cover;
+	background-position:50% 50%;
+	overflow:hidden;
+	cursor:pointer;
+	opacity:0.3;
+}
+.dummy
+{
+	width: 10.005%;
+	height: 20%;
+	float: left;
+}
+.event:hover
+{
+	opacity:1;
+}
+.eventName
+{	
+	background-color:rgba(0,0,0,0.7);
+	color:rgb(250,250,250);
+	position:relative;
+	padding:3px;
+	padding-left:5px;
+	bottom:-100%;
+	transition:bottom 0.5s;
+	-webkit-transition:bottom 0.5s;
+	font-family:'Lato', sans-serif;
+	height:20px;
+}
+.event:hover > .eventName
+{
+	bottom:calc(25px - 100%);
+}
+.kernelIcon
+{
+	float:left;
+	position:relative;
+	top:-25px;
+	height:25px;
+	margin-top:8px;
+	margin-left:8px;
+}
+
+/*===================================================LIGHTBOX STYLING=========================================*/
+#lightBox
+{
+	float:left;
+	width:100%;
+	height:0px;
+	background-color:rgb(70,70,70);
+	overflow:hidden;
+}
+#lightBoxContent
+{
+	background-color:rgb(50,50,50);
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+#eventImageWrapper
+{
+	width:60%;
+	height:100%;
+	position:absolute;
+	float:left;
+	background-size:cover;
+	background-position:0% 50%;
+	-moz-box-shadow: inset 0px 0px 50px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0px 0px 50px 2px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 50px 2px rgba(0,0,0,0.5);
+	
+}
+#eventDescriptionWrapper
+{
+	height:100%;
+	width:60%;
+	background-color:#F9F9F9;
+	position:absolute;
+	right:-5%;
+	transform:skew(-13deg,0deg);
+	-moz-box-shadow: 0px 0px 100px 12px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 100px 12px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 100px 12px rgba(0,0,0,0.7);
+	z-index:10;
+	color:rgb(20,20,20);
+}
+#closebtn
+{
+	height:50px;
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:20;
+	cursor:pointer;
+}
+#eventDescription
+{
+	height:90%;
+	width: 43%;
+	position:absolute;
+	top:5%;
+	right:70px;
+	z-index:20;
+}
+#iconList
+{
+	margin-top:15px;
+	float:right;
+	width:50px;
+}
+.eventInfoIcon,.tab
+{
+	width:40px;
+	height:40px;
+	margin:5px 0px 0px 0px;
+	color:rgb(230,230,230);
+	border-radius : 50px;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	cursor:pointer;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transition:0.2s;
+}
+.eventInfoIcon:hover,.tab:hover
+{
+	background-color:rgb(40,40,40);
+}
+.activeTab
+{
+	background-color:rgb(40,40,40);
+}
+
+.eventInfoIcon{display:none;}
+#eventName
+{
+	font-size:2.1em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin:5% 0% 5% 50px;
+	color:rgb(20,20,20);
+	float:left;
+	margin:15px 0px 15px 50px;
+}
+#infoHeader
+{
+	font-size:1.6em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin:5% 0% 5% 50px;
+	/* padding-left:10px; */
+	color:rgb(20,20,20);
+	
+}
+#info
+{
+	width:calc(100% - 50px);
+	padding-left:20px;
+	text-align:justify;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300; 
+	color:rgb(20,20,20);
+	font-size: 1.1em;
+	line-height: 25px;
+	outline:none;
+}
+#outerWrapper
+{
+	width:calc(100% - 60px);
+	height:calc(100% - 60px);
+}
+#innerWrapper
+{
+	outline:none;
+}
+
+.teamChoice
+{
+	border: solid 1px rgb(20,20,20);
+	width: 200px;
+	text-align: center;
+	padding: 7px 0px 7px 0px;
+	cursor:pointer;
+}
+
+.teamChoice:hover
+{
+	background-color: rgb(50,50,50);
+	color: rgb(230,230,230);
+}
+#teamcode
+{	padding: 10px;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	background-color: transparent;
+	border: solid 1px;
+}
+#teamcode::-moz-placeholder { color:rgba(20,20,20,0.5);font-style:italic;}
+#teamcode::-webkit-input-placeholder { color:rgba(20,20,20,0.5);font-style:italic; }
+/*=================================================SEARCH==========================================================*/
+#searchIcon
+{
+	position:fixed;
+	top:20px;
+	right:20px;
+	width:50px;
+	height:50px;
+	background-color:rgba(0,0,0,0.5);
+	padding:10px;
+	opacity:0.5;
+	cursor:pointer;
+	z-index:1;
+}
+#searchIcon img
+{
+	width:100%;
+}
+#searchIcon:hover
+{
+	opacity:1;
+}
+
+#search
+{
+	height:100%;
+	width:290px;
+	right:-290px;
+	position:absolute;
+	background-color:#111518;
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	top:0;
+	z-index:2;
+}
+#searchHeader
+{
+	width:100%;
+	height:50px;
+	background-color:#f15d22;
+}
+#iconSearchInnerWrapper
+{
+	height:40px;
+	background-color:rgba(255,255,255,0.3);
+	width:40px;
+	float:left;
+	margin-left:7px;
+	margin-top:5px;
+}
+#iconSearchInner
+{
+	float: left;
+	height: 20px;
+	margin-top: 6px;
+	margin-left: 0px;
+	opacity: 0.7;
+	border-right:solid 1px rgba(255,255,255,0.8);
+	padding:4px;
+	padding-right:7px;
+	padding-left:7px;
+}
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.6);
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255,0.6); 
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color:rgba(255,255,255,0.6); 
+}
+:-ms-input-placeholder {  
+   color:rgba(255,255,255,0.6);
+}
+#searchField
+{
+	height:40px;
+	width:190px;
+	top:5px;
+	position:absolute;
+	left:47px;
+	background-color:rgba(255,255,255,0.3);
+	border:0;
+	outline: none;
+	color:rgba(255,255,255,0.9);
+}
+#iconBack
+{	height:35px;
+	float:right;
+	position:absolute;
+	right:7px;
+	top:7px;
+	opacity:0.7;	
+}
+#iconBack:hover
+{	opacity:1;
+}
+.innerHead
+{
+	width:70%;
+	margin-left:10%;
+	margin-top:20px;
+	font-size:1.2em;
+	color:rgba(230,230,230,0.7);
+	border-bottom:solid 1px rgba(230,230,230,0.7);
+	padding-bottom:5px;
+}
+#searchResults,#categories
+{
+	width:70%;
+	margin-left:10%;
+	margin-top:20px;
+	color:rgba(230,230,230,0.7);
+	padding-bottom:5px;
+}
+#categories ul
+{
+	list-style-type:none;
+	padding:0;
+}
+.category
+{
+	width:100%;
+	border:solid 1px rgba(230,230,230,0.7);
+	margin-top:5px;
+	padding:5px;
+	text-align:center;
+	transition:0.2s;
+	cursor:pointer;
+}
+.category:hover
+{
+	background-color:rgba(230,230,230,1);
+	color:#111518;
+}
+.searchResult
+{
+	line-height:30px;
+	cursor:pointer;
+	font-size:0.95em;
+}
+.searchResult:hover
+{
+	color:rgba(255,255,255,1);
+}
+
+/* ======================PAPERS AND PROJS======================== */
+.paperProjInnerList
+{
+	list-style-type:none;
+	float:right;
+	padding:0;
+}
+
+.paperProjInnerList li
+{
+	padding:5px 10px 5px 10px;
+	border:solid 1px white;
+	transition:0.3s;
+	-webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	width: 200px;
+	text-align: center;
+	font-size: 0.9em;
+	margin:10px;
+	cursor:pointer;
+}
+
+.paperProjInnerList li:hover
+{
+	background-color:white;
+	color:rgb(20,20,20);
+}
+
+.activeInnerListPaper,.activeInnerListProj
+{
+	background-color:white;
+	color:rgb(20,20,20);
+}
+
+.projInnerContent,.paperInnerContent
+{
+	width:95%;
+}
